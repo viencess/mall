@@ -1,0 +1,6 @@
+hm:
+  db:
+    host: localhost
+    port: 3306
+    pw: 123456
+    database: hm-user

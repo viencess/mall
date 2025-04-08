@@ -1,0 +1,52 @@
+# 编译输出目录
+/target/
+/build/
+
+# 日志文件
+*.log
+logs/
+
+# IDE 配置文件
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+
+# 依赖管理
+/.mvn/
+/gradle/
+gradlew
+gradlew.bat
+.gradle/
+
+# 本地配置文件
+application-local.properties
+application-dev.properties
+application-test.properties
+application.yaml
+
+# 数据库文件
+*.db
+*.sqlite
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
+*~
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# Maven Wrapper
+!mvnw
+!mvnw.cmd
+
+# Gradle Wrapper
+!gradlew
+!gradlew.bat

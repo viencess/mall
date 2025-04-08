@@ -1,4 +1,4 @@
-package com.hmall.pay.enums;
+package com.hmall.trade.enums;
 
 import lombok.Getter;
 

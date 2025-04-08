@@ -3,7 +3,6 @@ package com.hmall.pay.service.impl;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.hmall.api.client.TradeClient;
 import com.hmall.api.client.UserClient;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
@@ -34,8 +33,6 @@ import java.time.LocalDateTime;
 public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> implements IPayOrderService {
 
     private final UserClient userClient;
-
-    private final TradeClient tradeClient;
 
     private final RabbitTemplate rabbitTemplate;
 
@@ -71,7 +68,11 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         }
     }
 
+    /*
+     * 更新pay數據庫的支付状态
+     */
     public boolean markPayOrderSuccess(Long id, LocalDateTime successTime) {
+        // UPDATE `pay_order` SET status = ? , pay_time = ? WHERE id = ? AND status = 1
         return lambdaUpdate()
                 .set(PayOrder::getStatus, PayStatus.TRADE_SUCCESS.getValue())
                 .set(PayOrder::getPaySuccessTime, successTime)
@@ -80,7 +81,6 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
                 .in(PayOrder::getStatus, PayStatus.NOT_COMMIT.getValue(), PayStatus.WAIT_BUYER_PAY.getValue())
                 .update();
     }
-
 
     private PayOrder checkIdempotent(PayApplyDTO applyDTO) {
         // 1.首先查询支付单

@@ -28,6 +28,7 @@ application-local.properties
 application-dev.properties
 application-test.properties
 application.yaml
+application-dev.yaml
 
 # 数据库文件
 *.db

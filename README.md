@@ -40,7 +40,7 @@ mall
 | Hutool               | Java工具类库  |
 | Lombok               | Java语言增强库 |
 
-#### 架构图
+#### 架构图 
 
 ### 基础设施
 ```mermaid

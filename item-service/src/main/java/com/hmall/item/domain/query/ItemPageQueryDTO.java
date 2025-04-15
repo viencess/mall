@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @ApiModel(description = "商品分页查询条件")
-public class ItemPageQuery extends PageQuery {
+public class ItemPageQueryDTO extends PageQuery {
     @ApiModelProperty("搜索关键字")
     private String key;
     @ApiModelProperty("商品分类")

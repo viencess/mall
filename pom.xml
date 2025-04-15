@@ -38,6 +38,7 @@
         <mybatis-plus.version>3.5.7</mybatis-plus.version>
         <hutool.version>5.8.11</hutool.version>
         <mysql.version>8.0.23</mysql.version>
+        <fastjson.version>1.2.72</fastjson.version>
     </properties>
 
     <!-- 对依赖包进行管理 -->
@@ -91,6 +92,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
 

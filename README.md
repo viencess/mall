@@ -1,7 +1,8 @@
 # 微服务电商平台（Spring Cloud）
 
 ## 📌 项目概述
-基于Spring Cloud Alibaba的分布式电商系统，采用微服务架构解决传统单体应用在高并发场景下的扩展性问题。
+该项目以黑马商城为基础拓展功能， 
+基于Spring Cloud Alibaba的分布式电商系统，，采用微服务架构解决传统单体应用在高并发场景下的扩展性问题。
 
 ## 项目文档
 [https://b11et3un53m.feishu.cn/wiki/FYNkwb1i6i0qwCk7lF2caEq5nRe](https://b11et3un53m.feishu.cn/wiki/FYNkwb1i6i0qwCk7lF2caEq5nRe)
